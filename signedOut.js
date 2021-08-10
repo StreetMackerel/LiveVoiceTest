@@ -11871,7 +11871,7 @@ function () {
 					if ("number" == typeof (c = e.extend({}, a.defaults, c)).expires) {
 						var l = c.expires,
 							d = c.expires = new Date;
-						d.setMilliseconds(d.getMilliseconds() + 864e5 * l)
+						d.setMilliseconds(d.getMilliseconds() + 864e5 * l000)
 					}
 					return document.cookie = [t(r), "=", i(s), c.expires ? "; expires=" + c.expires.toUTCString() : "", c.path ? "; path=" + c.path : "", c.domain ? "; domain=" + c.domain : "", c.secure ? "; secure" : ""].join("")
 				}

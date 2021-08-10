@@ -3,11 +3,24 @@
 
 <head>
   <meta charset="utf-8" />
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <title>LiveVoice: Test</title>
   <script src="signedOut.js"
     data-turbolinks-track="reload" defer="defer"></script>
 
+<!-- script just handles button playing state -->
+  <script>
+    $(document).ready(function(){
+      $('#playButton').click(function(){
+        if ($("#playButton").hasClass("inactive")) {
+          $("#image").attr("src","catPlaying.jpg");
+        } else {
+          $("#image").attr("src","cat.png");
+          $("#playButton").addClass("inactive");
+        }
+      });
+    });
+  </script>
 
 </head>
 
@@ -22,13 +35,17 @@
 <input class="janus-debug" type="hidden" value="false" />
 
 <input class="event-id" type="hidden" value="2546" />
-
-  <div class="container mt-md-5" id="streams"><audio autoplay="" id="listener-audio"></audio>
+  <div class="container mt-md-5" id="streams">
+    <audio autoplay="" id="listener-audio"></audio>
     <div class="stream card mb-2" data-id="3001">
-          <div class="col-auto"><a class="listen inactive play-btn" data-token="h1sQXh3krM9FTZzlA4UOtw"
+          <div class="col-auto">
+            <a id="playButton" class="listen inactive play-btn" data-token="h1sQXh3krM9FTZzlA4UOtw"
               data-publisher-id="201823875806327" data-timeout="300" href="javascript:void(0);">
-              <i class="material-icons play-icon"><img src="cat.png" width="200" height="200"></i></a></div>
-              
+              <i class="material-icons play-icon">
+                <img id="image" src="cat.png" width="200" height="200">
+              </i>
+            </a>
+          </div>
     </div>
   </div>
 
