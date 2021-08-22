@@ -1,0 +1,46 @@
+body{
+    background-color: dimgray;
+}
+div.center {
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+div.center p {
+    margin: 0
+}
+img.displayed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+p.text{
+    font-family: Verdana, Tahoma, sans-serif;
+    color:wheat;
+    font-size: 162.5%;
+}
+.cover{
+    border: none; 
+    opacity: 0; 
+    /* position: absolute;   */
+    /* top: 0; 
+    left: 0; */
+    -webkit-transition: opacity 2s linear;
+    -moz-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+    transition: opacity 2s linear;
+}
+.showMe {opacity: 1;}
+
+.waitingRoom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    color: cornsilk;
+    font-size: 100px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Socket.io Demo</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+    <script src="./signedOut.js"></script>
+    <script src="./p5.min.js"></script>
+    <script src="./sketch.js"></script>
+    <script src="./waitingRoom.js"></script>
+
+
+    <!-- script just handles button playing state -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body data-action-name="embedded" data-controller-name="streams" style="margin:0;">
+    <div id="canvas" style="position: absolute; margin:0; z-index: -1;"></div>
+    <div id="waitingRoom" style="position: absolute; margin:0; z-index: 5;"></div>
+    <div id="countdown" class="waitingRoom">00:00</div>
+    <div>
+        <p id="clientId" hidden="true"></p>
+    </div>
+    <div>
+        <p id="clientCount" hidden="true">0 Clients connected</p>
+    </div>
+    <div class="center">
+        <p class="center p text" id="title">default</p>
+    </div>
+    <div class="center">
+        <p class="center p text" id="author">default</p>
+    </div>
+    <div style = "position:relative">
+        <div width="400" height="300">
+            <img class = "displayed cover" id="slideimg0" src="img/1.jpg" width = "400" height = "300" style = "position:relative">
+            <img class = "displayed cover" id="slideimg1" src="img/2.jpg" width = "400" height = "300" style = "position:absolute; top:0; left: 50%; margin-left: -200px;">
+            <img class = "displayed cover" id="slideimg2" src="img/3.jpg" width = "400" height = "300" style = "position:absolute; top:0; left: 50%; margin-left: -200px;">
+            <img class = "displayed cover" id="slideimg3" src="img/4.jpg" width = "400" height = "300" style = "position:absolute; top:0; left: 50%; margin-left: -200px;">
+        </div>
+    </div>
+    
+
+    
+  <!-- <iframe src="https://livevoice.io/en/streams/embedded?code=727564&messages=false" style="border:none;" width="100%" height="225"> -->
+<input class="janus-https-url" type="hidden" value="https://janus-infound.net/janus" />
+    
+<!-- this websocket is used to check if audio is live -->
+<input class="janus-wss-url" type="hidden" value="wss://janus-infound.net/janus-websocket" /> 
+
+<input class="janus-auth-token" type="hidden" value="2021-08-20T16:52:34+02:00,f6454e0c63a2f3007ada1a0ac5c431d5" />
+
+<!-- 2021-08-10T16:01:06+02:00,7e1155fd557317214f42c661b3fde87c -->
+<!-- 2021-08-09T12:34:08+02:00,a4982ab9201db8eb7faa26c649f5f75d //stopped working after 36-48 hours// -->
+<!-- value="2021-08-12T10:47:44+02:00,5cafb9e0ebbb4fcc2398ed63789f6819" //9:49AM 12/08 above stopped working -->
+
+<input class="janus-debug" type="hidden" value="false" />
+<input class="event-id" type="hidden" value="2546" />
+
+  <div class="container mt-md-5 center" id="streams">
+    <audio autoplay="" id="listener-audio" controls hidden="true" ></audio>
+    <div class="stream card mb-2" data-id="3001">
+          <div class="col-auto">
+            <img id="buttonOff" src="img/button.png" width="200" height="200" style="margin-top: 15em; opacity: 15%;">
+            <a id="playButton" class="listen inactive play-btn" data-token="h1sQXh3krM9FTZzlA4UOtw" data-publisher-id="201823875806327" data-timeout="300" href="javascript:void(0);" interactive="false">
+              <i class="material-icons play-icon">
+                <img id="image" src="img/button.png" width="200" height="200" style="margin-top: 15em;">
+              </i>
+            </a>
+          </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+

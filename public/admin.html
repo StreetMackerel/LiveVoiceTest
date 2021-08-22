@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Socket.io Demo</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <p id="clientId"></p>
+    <p id="title">default</p>
+    <p id="author">default</p>
+    <p id="clientCount">0 Clients connected</p>
+    <p>admin page</p>
+    
+    <button onClick = "test()">test</button>
+    <button onClick = "buttonOn()">interactivity</button>
+    <a id="playButton" class="listen inactive play-btn" data-token="h1sQXh3krM9FTZzlA4UOtw"
+              data-publisher-id="201823875806327" data-timeout="300" href="javascript:void(0);" hidden="true">
+              <i class="material-icons play-icon">
+                <img id="image" src="cat.png" width="200" height="200">
+              </i>
+    </a>
+</body>
+</html>
