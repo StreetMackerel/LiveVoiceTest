@@ -19,14 +19,15 @@ function draw() {
   if (toggle){
     if(count%4==0){
       fill(255,0,0);
+      console.log("flash")
     } else {
-      noFill();
+      fill(255,255,0);
     }
 
     if(count>=duration){
       toggle = false;
       count = 0;
-      noFill();
+      fill(255,255,0);
     }
     count++;
   }

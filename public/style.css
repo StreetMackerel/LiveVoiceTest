@@ -44,3 +44,13 @@ p.text{
     color: cornsilk;
     font-size: 100px;
 }
+
+.strobe{
+    animation:blinkingBG ease-in 1s infinite;
+}
+@keyframes blinkingBG{
+    0%{     background-color: dimgray; }
+    25%{    background-color: white;}
+    75%{    background-color: white;}
+    100%{    background-color:dimgray; }
+}

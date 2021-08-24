@@ -128,7 +128,7 @@ function startTimer(duration) {
         if (--timer < 0) {
             timer = 0;
             io.emit("endCountdown", _CdPos);
-            _WRstate = 1;
+            _WRstate = 1; //handles removing waiting room for new connections
             clearInterval(repeat);
         }
     }, 1000);

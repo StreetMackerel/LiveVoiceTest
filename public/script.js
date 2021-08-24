@@ -30,22 +30,6 @@ socket.on('buttonSwitch', function(_buttonState) {
     }
 })
 
-function displayTime(){
-    socket.emit('displayTime', testText);
-}
-
-function displayImage(){
-    socket.emit('displayImage', testText);
-}
-
-function nextTrack(){
-    socket.emit('nextTrack', testText);
-}
-
-function effect(){
-    socket.emit('effect', testText);
-}
-
 function killWR(){
     document.getElementById('waitingRoom').hidden=true;
     document.getElementById('countdown').hidden=true;
@@ -77,7 +61,10 @@ socket.on('next', function(trackID) {
 })
 
 socket.on('effect', function(e) {
-    toggle = true;
+    count = 0;
+    var bg = document.body;
+    bg.classList.add("strobe");
+    setTimeout(function(){bg.classList.remove("strobe")}, 5000)
 })
 
 socket.on('vibrate', function(duration) {
