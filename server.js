@@ -14,6 +14,7 @@ var _title;
 var _author;
 var _trackID = 0;
 var _CdPos = 0;
+var _WRstate = 0;
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.json());
@@ -32,10 +33,7 @@ io.on('connection', function(client) {
     io.emit('author', _author);
     io.emit('buttonSwitch', _buttonState)
     io.emit('next', _trackID)
-
-    if(_CdPos == "00:00"){
-        //delete waitingroom canvas
-    }
+    io.emit('killWR', _WRstate);
 
     io.clients(function(error, clients) {
         if(error) throw error;
@@ -130,6 +128,7 @@ function startTimer(duration) {
         if (--timer < 0) {
             timer = 0;
             io.emit("endCountdown", _CdPos);
+            _WRstate = 1;
             clearInterval(repeat);
         }
     }, 1000);

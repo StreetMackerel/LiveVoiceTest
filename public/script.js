@@ -46,7 +46,16 @@ function effect(){
     socket.emit('effect', testText);
 }
 
+function killWR(){
+    document.getElementById('waitingRoom').hidden=true;
+    document.getElementById('countdown').hidden=true;
+}
 
+socket.on('killWR', function(state) {
+    if(state == 1){
+        killWR();
+    }
+})
 
 
 //post triggered methods

@@ -17,6 +17,9 @@ function draw() {
 
   if(anim){
     xpos+=4;
+    if(xpos>width){
+      killWR();
+    }
   }
 }
 
