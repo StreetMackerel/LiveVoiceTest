@@ -25,13 +25,25 @@ socket.on('buttonSwitch', function(_buttonState) {
     if(!buttonState){
         document.getElementById('buttonOff').style.display = "block";
         document.getElementById('image').style.display = "none";
-        document.getElementById('image').click();
-
     }else {
         document.getElementById('buttonOff').style.display = "none";
         document.getElementById('image').style.display = "block";
+        document.getElementById("playButton").click();
+        document.getElementById("image").src = "img/pause.png";
+        playing = true;
     }
 })
+
+function togglePlay(){
+    console.log("toggling");
+    if(playing){
+        document.getElementById("image").src = "img/button.png"
+        playing = false
+    } else {
+        document.getElementById("image").src = "img/pause.png"
+        playing = true;
+    }
+}
 
 function killWR(){
     document.getElementById('waitingRoom').hidden=true;
