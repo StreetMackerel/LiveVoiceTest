@@ -1,0 +1,7 @@
+File info: 
+Has audio: 0
+Has video: 1
+fps:       60
+duration:  9
+Convertion ffmpeg args: " -i "Media/.upload_temp/1.mp4"  -filter_complex "split=3[1][preview][lowres_preview], [1]crop=1008:288:0:0, format=pix_fmts=yuv422p[1], [preview]scale=518:148[preview], [lowres_preview]scale=120:34[lowres_preview]"  -r 60.000000  -qscale 1  -y   -map "[1]" "Media/.upload_temp/_temp.rva/1.m2v" -r 60.000000  -b:v 10000000  -y   -map "[preview]" "Media/.upload_temp/_temp.rva/preview.m2v" -r 60.000000  -b:v 10000000  -y   -map "[lowres_preview]" "Media/.upload_temp/_temp.rva/lowres_preview.m2v""
+Create preview ffmpeg args: " -i "Media/.upload_temp/1.mp4"  -an   -ss 4  -an   -r 1  -vframes 1  -filter_complex "scale=518:148" -qscale:v 2 -y "Media/.upload_temp/_temp.rva/preview.jpg" "

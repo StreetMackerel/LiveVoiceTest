@@ -1,0 +1,411 @@
+<AppHost Version="20802" BuildNumber="0" MaxLogsSize="104857600">
+    <Nodes type="Root" name="Root">
+        <Param name="Enabled" type="2" Bool="true" />
+        <Param name="$Pos" type="11" hide="1" DVec2="0.0 0.0" />
+        <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 0.0 0.0" />
+        <Param name="$AutoupdateProcessOrder" type="2" hide="1" Bool="true" />
+        <Param name="$DisableLinksAnimate" type="2" hide="1" Bool="false" />
+        <Nodes>
+            <Node type="WebServer" name="WebServer">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-1682.0 -855.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 261.0 192.0" />
+                <Param name="Path" type="7" String="" />
+                <Param name="Port" type="3" Int="8081" />
+                <Param name="Image update timeout, ms" type="3" Int="1000" />
+                <Param name="wizardsList" type="7" String="Wizards to show" />
+            </Node>
+            <Node type="HttpListener" name="HttpListener">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-1507.0 -440.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 273.0 192.0" />
+                <Param name="port" type="3" Int="8050" />
+                <Param name="Ignore duplicate requests" type="2" Bool="true" />
+                <Param name="Commands count" type="3" Int="2" />
+                <Param name="Verbose logging" type="2" Bool="true" />
+                <Param name="Command 1" type="7" String="/test" />
+                <Param name="trigger 1" type="18" dir="2" port="1" />
+                <Param name="Command 2" type="7" String="/test2" />
+                <Param name="trigger 2" type="18" dir="2" port="1" />
+            </Node>
+            <Node type="UdpListener" name="UdpListener">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-1665.0 76.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 272.0 192.0" />
+                <Param name="port" type="3" Int="1300" />
+                <Param name="Commands count" type="3" Int="2" />
+                <Param name="Command 1" type="7" String="" />
+                <Param name="Command 2" type="7" String="" />
+                <Param name="Trigger1" type="18" dir="2" port="1" hide="1" />
+                <Param name="Trigger2" type="18" dir="2" port="1" hide="1" />
+                <Param name="Bind Trigger1" type="18" />
+                <Param name="Bind Trigger2" type="18" />
+                <Param name="Verbose logging" type="2" Bool="true" />
+            </Node>
+            <Node type="TextValue" name="TextValue">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-936.0 -617.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 270.0 192.0" />
+                <Param name="UI Group Name" type="7" String="unnamed" />
+                <Param name="UI Control Position" type="10" IVec2="0 0" />
+                <Param name="Multiline" type="2" Bool="false" />
+                <Param name="Value" type="7" port="1" String="test2" />
+                <Param name="Text" type="7" dir="2" port="1" String="test2" />
+            </Node>
+            <Node type="TextValue" name="TextValue 2">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-933.0 -858.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 270.0 192.0" />
+                <Param name="UI Group Name" type="7" String="unnamed" />
+                <Param name="UI Control Position" type="10" IVec2="0 0" />
+                <Param name="Multiline" type="2" Bool="false" />
+                <Param name="Value" type="7" port="1" String="test1" />
+                <Param name="Text" type="7" dir="2" port="1" String="test1" />
+            </Node>
+            <Node type="GuiPanel" name="GuiPanel">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-220.0 -1100.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 234.0 192.0" />
+                <Param name="$xmlLayout" type="7" hide="1" String="" />
+                <Param name="Messages" type="28" dir="2" port="1" />
+            </Node>
+            <Node type="Button" name="Button">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="43.0 -894.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 364.0 192.0" />
+                <Param name="UI Group Name" type="7" String="unnamed" />
+                <Param name="UI Control Position" type="10" IVec2="0 0" />
+                <Param name="Trigger" type="18" port="1" />
+                <Param name="out" type="18" dir="2" port="1" hide="1" />
+                <Param name="Image" type="7" String="" />
+                <Param name="Messages" type="28" dir="2" port="1" />
+            </Node>
+            <Node type="Switch" name="Switch">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-376.0 -552.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 440.0 288.0" />
+                <Param name="UI Group Name" type="7" String="unnamed" />
+                <Param name="UI Control Position" type="10" IVec2="0 0" />
+                <Param name="Type" type="9" Combo="4" />
+                <Param name="Inputs quantity" type="3" Int="2" />
+                <Param name="Input 1 name" type="7" String="Input 1" />
+                <Param name="Input 1" type="7" port="1" String="test1" />
+                <Param name="Input 2 name" type="7" String="Input 2" />
+                <Param name="Input 2" type="7" port="1" String="test2" />
+                <Param name="$inputLabels" type="7" hide="1" String="" />
+                <Param name="Input number" type="3" port="1" Int="1" />
+                <Param name="output" type="7" dir="2" port="1" String="test1" />
+                <Param name="Switch to Input 1" type="18" port="1" />
+                <Param name="Switch to Input 2" type="18" port="1" />
+            </Node>
+            <Node type="MediaPlayer" name="MediaPlayer1">
+                <Param name="Enabled" type="2" port="1" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-1337.0 462.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 621.0 420.0" />
+                <Param name="Image Size" type="10" IVec2="1920 1080" />
+                <Param name="Keep Aspect Ratio" type="2" Bool="false" />
+                <Param name="Image Interpolation" type="9" Combo="0" />
+                <Param name="Transparent Background" type="2" Bool="true" />
+                <Param name="Enable Stereoscopic" type="2" port="1" Bool="false" />
+                <Param name="Optimize Rendering" type="2" Bool="true" />
+                <Param name="Autoplay" type="2" Bool="true" />
+                <Param name="Playback Speed" type="5" Double="1.0" />
+                <Param name="Listen to Timecode" type="2" hide="1" Bool="false" />
+                <Param name="Follow Timecode" type="2" hide="1" Bool="false" />
+                <Param name="Timecode In" type="16" port="1" TimeCode="0.0" />
+                <Param name="Timecode Frame Rate" type="9" Combo="0" />
+                <Param name="Regenerate Timecode Frames" type="3" hide="1" Int="5" />
+                <Param name="Volume" type="5" port="1" Double="1.0" />
+                <Param name="Number of Audio Outputs" type="3" Int="1" />
+                <Param name="Image" type="1" dir="2" port="1" />
+                <Param name="Number of AUX Inputs" type="3" Int="1" />
+                <Param name="AUX Image 1" type="1" port="1" />
+                <Param name="Playback Sync Policy" type="9" Combo="2" />
+                <Param name="Image Wrap Mode" type="9" Combo="1" />
+                <Param name="Frame Upload Mode" type="9" Combo="1" />
+                <Param name="Log Frame Drops" type="2" Bool="false" />
+                <Param name="Events" type="28" port="1" />
+                <Param name="Cluster Mode" type="9" port="1" Combo="0" />
+                <Param name="Master Media Player" type="9" port="1" Combo="0" />
+                <Param name="$currentMasterMp" type="7" hide="1" String="" />
+                <Param name="Audio" type="21" dir="2" port="1" />
+                <GroupItem name="RootGroup" type="0">
+                    <GroupItem name="Playlist" type="1">
+                        <Playlist>
+                            <Item filename="Media/Logo_Screenberry.rva" id="0" />
+                        </Playlist>
+                    </GroupItem>
+                </GroupItem>
+                <Attributes muted="0" volume="1.0" />
+                <ColorCorrection curvePoints_0="0 0 255 255" curvePoints_1="0 0 255 255" curvePoints_2="0 0 255 255" curvePoints_3="0 0 255 255" hue="0" saturation="0" lightness="0" />
+                <TimeCodeFilter filterFrames="5" follow="false" />
+            </Node>
+            <Node type="UdpSender" name="UdpSender">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="986.0 -801.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 262.0 192.0" />
+                <Param name="IP address" type="7" String="127.0.0.1" />
+                <Param name="Port" type="3" Int="1300" />
+                <Param name="Text" type="7" String="LightsOn" />
+                <Param name="Send" type="18" port="1" />
+            </Node>
+            <Node type="AudioOut" name="AudioOut1">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-402.0 886.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 254.0 216.0" />
+                <Param name="Audio" type="21" port="1" />
+                <Param name="Audio Driver" type="9" Combo="0" />
+                <Param name="$audioDeviceName" type="7" hide="1" String="Динамики (Realtek High Definition Audio)" />
+                <Param name="Audio Device" type="9" Combo="0" />
+                <Param name="Refresh List of Devices" type="18" />
+                <Param name="Volume" type="5" port="1" Double="1.0" />
+                <Param name="Audio Channels" type="9" Combo="0" />
+                <Param name="Audio Delay" type="3" Int="0" />
+                <Param name="Custom Mixing" type="2" Bool="false" />
+                <Param name="Number of Input Channels" type="3" Int="16" />
+                <Param name="Number of Output Channels" type="3" hide="1" Int="2" />
+                <Param name="Mix Matrix" type="31" hide="1" Matrix="2ii 0 0 " />
+                <Param name="Number of Additional Mix Matrices" type="3" hide="1" Int="0" />
+                <Param name="Stream Buffer Size" type="3" Int="60" />
+                <Param name="Do not Suspend Device" type="2" Bool="false" />
+            </Node>
+            <Node type="Rectangle" name="Rect1">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-396.0 539.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 435.0 244.0" />
+                <Param name="Patch" type="23" dir="2" port="1" />
+                <Param name="Source Image" type="1" port="1" />
+                <Param name="Opacity" type="5" port="1" Double="1.0" />
+                <Param name="View mode" type="9" Combo="0" />
+                <Param name="Blending Mode" type="9" Combo="0" />
+                <Param name="Multiply by Alpha" type="2" Bool="false" />
+                <Param name="Image Interpolation" type="9" Combo="0" />
+                <Param name="Lock Geometry" type="2" Bool="false" />
+                <Param name="$verts" type="12" hide="1" DVec2Array="0.0 0.0 1.0 0.0 0.0 1.0 1.0 1.0" />
+                <Param name="$uvs" type="12" hide="1" DVec2Array="0.0 0.0 1.0 0.0 0.0 1.0 1.0 1.0" />
+                <Param name="$alphas" type="6" hide="1" DoubleArray="1.0 1.0 1.0 1.0" />
+                <Param name="$orientVerts" type="5" hide="1" Double="0.0" />
+                <Param name="$orientUvs" type="5" hide="1" Double="0.0" />
+                <Param name="SoftEdgeBlender" type="22" port="1" />
+                <Param name="Gamma Multiplier" type="5" Double="1.0" />
+                <Param name="Transform Matrix" type="15" port="1" DMat4="1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0" />
+                <Param name="Swap UV and Geometry" type="2" Bool="false" />
+                <Param name="Soft Edge" type="5" Double="0.0" />
+                <Param name="$indexesRotated" type="10" hide="1" IVec2="0 0" />
+            </Node>
+            <Node type="Display" name="Display2">
+                <Param name="Enabled" type="2" port="1" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-347.0 519.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="538.0 0.0 497.0 288.0" />
+                <Param name="Patches" type="23" port="1" />
+                <Param name="Image" type="1" port="1" />
+                <Param name="Size" type="10" IVec2="1024 384" />
+                <Param name="Position" type="10" IVec2="0 0" />
+                <Param name="Test Pattern" type="9" Combo="0" />
+                <Param name="Display" type="24" dir="2" port="1" />
+                <Param name="DomeSDKDisplay" type="33" dir="2" />
+                <Param name="Enable Stereoscopic" type="2" port="1" Bool="false" />
+                <Param name="Stereoscopic Mode" type="9" Combo="0" />
+                <Param name="Swap Left-Right" type="2" port="1" Bool="false" />
+            </Node>
+            <Node type="TextImage" name="TextImage">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="355.0 -277.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 279.0 192.0" />
+                <Param name="Image Size" type="10" IVec2="400 100" />
+                <Param name="Text" type="7" port="1" String="test1" />
+                <Param name="Font" type="9" Combo="5" />
+                <Param name="Font Size" type="3" Int="50" />
+                <Param name="Color" type="13" DVec3="1.0 1.0 1.0" />
+                <Param name="Fit to Size" type="2" Bool="true" />
+                <Param name="Horizontal Alignment" type="9" Combo="0" />
+                <Param name="Vertical Alignment" type="9" Combo="0" />
+                <Param name="Image" type="1" dir="2" port="1" />
+            </Node>
+            <Node type="Rectangle" name="Rect2">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="-389.0 99.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 435.0 244.0" />
+                <Param name="Patch" type="23" dir="2" port="1" />
+                <Param name="Source Image" type="1" port="1" />
+                <Param name="Opacity" type="5" port="1" Double="1.0" />
+                <Param name="View mode" type="9" Combo="0" />
+                <Param name="Blending Mode" type="9" Combo="0" />
+                <Param name="Multiply by Alpha" type="2" Bool="false" />
+                <Param name="Image Interpolation" type="9" Combo="0" />
+                <Param name="Lock Geometry" type="2" Bool="false" />
+                <Param name="$verts" type="12" hide="1" DVec2Array="0.0 0.0 1.0 0.0 0.0 1.0 1.0 1.0" />
+                <Param name="$uvs" type="12" hide="1" DVec2Array="0.0 0.0 1.0 0.0 0.0 1.0 1.0 1.0" />
+                <Param name="$alphas" type="6" hide="1" DoubleArray="1.0 1.0 1.0 1.0" />
+                <Param name="$orientVerts" type="5" hide="1" Double="0.0" />
+                <Param name="$orientUvs" type="5" hide="1" Double="0.0" />
+                <Param name="SoftEdgeBlender" type="22" port="1" />
+                <Param name="Gamma Multiplier" type="5" Double="1.0" />
+                <Param name="Transform Matrix" type="15" port="1" DMat4="1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0" />
+                <Param name="Swap UV and Geometry" type="2" Bool="false" />
+                <Param name="Soft Edge" type="5" Double="0.0" />
+                <Param name="$indexesRotated" type="10" hide="1" IVec2="0 0" />
+            </Node>
+            <Node type="Display" name="Display1">
+                <Param name="Enabled" type="2" port="1" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="197.0 77.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 497.0 288.0" />
+                <Param name="Patches" type="23" port="1" />
+                <Param name="Image" type="1" port="1" />
+                <Param name="Size" type="10" IVec2="1024 384" />
+                <Param name="Position" type="10" IVec2="0 384" />
+                <Param name="Test Pattern" type="9" Combo="0" />
+                <Param name="Display" type="24" dir="2" port="1" />
+                <Param name="DomeSDKDisplay" type="33" dir="2" />
+                <Param name="Enable Stereoscopic" type="2" port="1" Bool="false" />
+                <Param name="Stereoscopic Mode" type="9" Combo="0" />
+                <Param name="Swap Left-Right" type="2" port="1" Bool="false" />
+            </Node>
+            <Node type="Canvas" name="Context1">
+                <Param name="Enabled" type="2" Bool="true" />
+                <Param name="$Pos" type="11" hide="1" DVec2="874.0 346.0" />
+                <Param name="$Rect" type="14" hide="1" DVec4="0.0 0.0 342.0 260.0" />
+                <Param name="Image Size" type="10" IVec2="1024 768" />
+                <Param name="Position" type="10" IVec2="0 0" />
+                <Param name="Minimized" type="2" Bool="false" />
+                <Param name="Fullscreen" type="2" Bool="false" />
+                <Param name="Window Frame" type="2" Bool="false" />
+                <Param name="Disable Windows Explorer" type="2" Bool="false" />
+                <Param name="Quad-buffered Stereo" type="2" Bool="false" />
+                <Param name="VSync" type="2" Bool="true" />
+                <Param name="VSync Interval" type="3" Int="1" />
+                <Param name="VSync Status" type="2" Bool="true" />
+                <Param name="Target Frame Rate" type="5" hide="1" Double="25.0" />
+                <Param name="Multisample Anti-Aliasing (MSAA)" type="9" Combo="0" />
+                <Param name="Always on Top" type="2" Bool="false" />
+                <Param name="Raise Window" type="18" />
+                <Param name="OpenGL Version" type="9" hide="1" Combo="0" />
+                <Param name="Renderer" type="7" String="Renderer: GeForce GTX 660/PCIe/SSE2" />
+                <Param name="Current OpenGL Version" type="7" String="OpenGL Version: 4.6 (CORE)" />
+                <Param name="Warm Up Frames" type="3" Int="5" />
+                <Param name="Measuring Time" type="3" Int="500" />
+                <Param name="Log Frame Drops" type="5" Double="1.75" />
+                <Param name="Log Frame Stats" type="2" Bool="false" />
+                <Param name="Frame Stats Interval" type="5" Double="1.0" />
+                <Param name="Force glFinish() Use" type="2" Bool="false" />
+                <Param name="Using glFinish()" type="2" Bool="false" />
+                <Param name="Async Transfer Threads" type="3" Int="2" />
+                <Param name="Additional Buffers for Upload" type="3" hide="1" Int="0" />
+                <Param name="Displays" type="24" port="1" />
+                <Param name="Patches" type="23" port="1" />
+                <Param name="Background Image" type="1" port="1" />
+                <Param name="With Preview" type="2" Bool="false" />
+                <Param name="Preview" type="1" dir="2" hide="1" />
+            </Node>
+        </Nodes>
+        <Links>
+            <Link sourceNode="Display1" sourceParam="Display" sinkNode="Context1" sinkParam="Displays" />
+            <Link sourceNode="MediaPlayer1" sourceParam="Image" sinkNode="Rect1" sinkParam="Source Image" />
+            <Link sourceNode="MediaPlayer1" sourceParam="Audio" sinkNode="AudioOut1" sinkParam="Audio" />
+            <Link sourceNode="Rect1" sourceParam="Patch" sinkNode="Display2" sinkParam="Patches" />
+            <Link sourceNode="Display2" sourceParam="Display" sinkNode="Context1" sinkParam="Displays" />
+            <Link sourceNode="Rect2" sourceParam="Patch" sinkNode="Display1" sinkParam="Patches" />
+            <Link sourceNode="TextImage" sourceParam="Image" sinkNode="Rect2" sinkParam="Source Image" />
+            <Link sourceNode="HttpListener" sourceParam="trigger 1" sinkNode="Switch" sinkParam="Switch to Input 1" />
+            <Link sourceNode="HttpListener" sourceParam="trigger 2" sinkNode="Switch" sinkParam="Switch to Input 2" />
+            <Link sourceNode="TextValue" sourceParam="Text" sinkNode="Switch" sinkParam="Input 2" />
+            <Link sourceNode="TextValue 2" sourceParam="Text" sinkNode="Switch" sinkParam="Input 1" />
+            <Link sourceNode="Switch" sourceParam="output" sinkNode="TextImage" sinkParam="Text" />
+            <Link sourceNode="UdpListener" sourceParam="Trigger1" sinkNode="Switch" sinkParam="Switch to Input 1" />
+            <Link sourceNode="UdpListener" sourceParam="Trigger2" sinkNode="Switch" sinkParam="Switch to Input 2" />
+        </Links>
+    </Nodes>
+    <PanelLayout>
+        <Workspace name="Node Graph">
+            <AdvancedDockingSystem Version="1" UserVersion="0" Containers="4">
+                <Container Floating="0">
+                    <Splitter Orientation="-" Count="2">
+                        <Splitter Orientation="|" Count="2">
+                            <Area Tabs="1" Current="MediaLibrary">
+                                <Widget Name="MediaLibrary" Closed="1" />
+                            </Area>
+                            <Area Tabs="1" Current="Root/Context1">
+                                <Widget Name="Root/Context1" Closed="1" />
+                            </Area>
+                            <Sizes>0.5 0.5</Sizes>
+                        </Splitter>
+                        <Area Tabs="2" Current="NodeGraph">
+                            <Widget Name="Root/MediaPlayer1" Closed="0" />
+                            <Widget Name="NodeGraph" Closed="0" />
+                        </Area>
+                        <Sizes>0.5 0.5</Sizes>
+                    </Splitter>
+                </Container>
+                <Container Floating="1">
+                    <Splitter Orientation="-" Count="1">
+                        <Area Tabs="1" Current="Licenses">
+                            <Widget Name="Licenses" Closed="1" />
+                        </Area>
+                        <Sizes>1</Sizes>
+                    </Splitter>
+                </Container>
+                <Container Floating="1">
+                    <Splitter Orientation="-" Count="1">
+                        <Area Tabs="1" Current="Files">
+                            <Widget Name="Files" Closed="1" />
+                        </Area>
+                        <Sizes>1</Sizes>
+                    </Splitter>
+                </Container>
+                <Container Floating="1">
+                    <Splitter Orientation="-" Count="1">
+                        <Area Tabs="1" Current="Logs">
+                            <Widget Name="Logs" Closed="1" />
+                        </Area>
+                        <Sizes>1</Sizes>
+                    </Splitter>
+                </Container>
+            </AdvancedDockingSystem>
+        </Workspace>
+        <Workspace name="New Workspace">
+            <AdvancedDockingSystem Version="1" UserVersion="0" Containers="4">
+                <Container Floating="0">
+                    <Splitter Orientation="|" Count="4">
+                        <Area Tabs="1" Current="NodeGraph">
+                            <Widget Name="NodeGraph" Closed="1" />
+                        </Area>
+                        <Area Tabs="1" Current="MediaLibrary">
+                            <Widget Name="MediaLibrary" Closed="1" />
+                        </Area>
+                        <Area Tabs="1" Current="Root/MediaPlayer1">
+                            <Widget Name="Root/MediaPlayer1" Closed="1" />
+                        </Area>
+                        <Area Tabs="1" Current="Root/Context1">
+                            <Widget Name="Root/Context1" Closed="1" />
+                        </Area>
+                        <Sizes>0.25 0.25 0.25 0.25</Sizes>
+                    </Splitter>
+                </Container>
+                <Container Floating="1">
+                    <Splitter Orientation="-" Count="1">
+                        <Area Tabs="1" Current="Licenses">
+                            <Widget Name="Licenses" Closed="1" />
+                        </Area>
+                        <Sizes>1</Sizes>
+                    </Splitter>
+                </Container>
+                <Container Floating="1">
+                    <Splitter Orientation="-" Count="1">
+                        <Area Tabs="1" Current="Files">
+                            <Widget Name="Files" Closed="1" />
+                        </Area>
+                        <Sizes>1</Sizes>
+                    </Splitter>
+                </Container>
+                <Container Floating="1">
+                    <Splitter Orientation="-" Count="1">
+                        <Area Tabs="1" Current="Logs">
+                            <Widget Name="Logs" Closed="1" />
+                        </Area>
+                        <Sizes>1</Sizes>
+                    </Splitter>
+                </Container>
+            </AdvancedDockingSystem>
+        </Workspace>
+    </PanelLayout>
+</AppHost>

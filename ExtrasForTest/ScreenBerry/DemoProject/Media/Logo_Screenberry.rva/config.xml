@@ -1,0 +1,16 @@
+<VideoAtlas version="1.0">
+    <ColorResources>
+        <Movie name="1" filename="1.m2v" />
+    </ColorResources>
+    <MaskResources />
+    <Frames value="540" />
+    <AudioFrames value="540" />
+    <MapFrames value="540" />
+    <FPS value="60.000000" />
+    <Canvas pixelWidth="1008" pixelHeight="288">
+        <ColorLayout>
+            <Rect blX="0" blY="0" trX="1008" trY="288" blU="0.000000" blV="1.000000" trU="1.000000" trV="0.000000" source="1" />
+        </ColorLayout>
+        <MaskLayout />
+    </Canvas>
+</VideoAtlas>

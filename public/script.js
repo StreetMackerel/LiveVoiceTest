@@ -1,6 +1,7 @@
 var socket = io.connect();
 var testText = "default";
 var buttonState;
+var playing;
 
 window.focus();
 
@@ -24,6 +25,8 @@ socket.on('buttonSwitch', function(_buttonState) {
     if(!buttonState){
         document.getElementById('buttonOff').style.display = "block";
         document.getElementById('image').style.display = "none";
+        document.getElementById('image').click();
+
     }else {
         document.getElementById('buttonOff').style.display = "none";
         document.getElementById('image').style.display = "block";
