@@ -8,6 +8,7 @@ var app = express()
 var http = require('http')
 var server = http.createServer(app)
 var io = require('socket.io')(server)
+var PORT = process.env.PORT || 3000
 
 var _buttonState = false;
 var _title;
@@ -107,7 +108,7 @@ io.on('connection', function(client) {
 })
 
 //start web server
-server.listen(3000, function() {
+server.listen(PORT, function() {
     console.log('Server starting on port *:3000')
 })
 
