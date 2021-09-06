@@ -1,13 +1,14 @@
 {
   "name": "socket-click",
   "version": "1.0.0",
-  "description": "Computer Networks Node Lab 1",
+  "description": "digital companion",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "nodemon server.js"
   },
-  "author": "Eoan O Dea",
+  "author": "James Blair",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
